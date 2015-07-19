@@ -43,14 +43,6 @@ RUN \
 ADD logstash/10-syslog.conf logstash/conf.d/10-syslog.conf
 
 
-# Ports: Logstash/Kibana/Elasticsearch
-EXPOSE 5000
-EXPOSE 5514
-EXPOSE 5601
-EXPOSE 9200
-#EXPOSE 9300
-#EXPOSE 9301
-
 # Supervisor
 RUN sudo mkdir -p "/etc/supervisor/conf.d/"
 ADD supervisor/default.conf /etc/supervisor/conf.d/
