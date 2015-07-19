@@ -14,7 +14,7 @@ RUN useradd docker && echo "docker:docker" | chpasswd && adduser docker sudo
 RUN mkdir -p /home/docker && chown -R docker:docker /home/docker
 
 # SSH requires this direcotry for privilege separation.
-mkdir /var/run/sshd
+RUN mkdir -p /var/run/sshd
 
 # Install Elasticsearch
 RUN \
